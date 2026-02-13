@@ -1,0 +1,37 @@
+[data-user-id] > img {
+    border-radius: 100%;
+}
+
+[data-message-id]:hover {
+    background: #0002;
+}
+
+[data-drop-above][data-drop-below] {
+    border-radius: 5em !important;
+    outline: none !important;
+    background: var(--oq6d073);
+}
+
+[data-drop-above][data-drop-below] button[data-id] {
+    border-radius: 100%;
+}
+
+*:not([class="_1yan8dd1 _1mqalmd1 _1mqalmd0 _1yan8dd2 _1yan8ddb _1yan8ddd"]) {
+    border-width: 0 !important;
+}
+
+button:has(svg):not(:has(span)) {
+  --color-mix-percentage: 70%;
+  background: color-mix(in oklab, var(--oq6d073), transparent var(--color-mix-percentage));
+  &:hover {
+    --color-mix-percentage: 50%;
+  }
+}
+
+#root > div {
+  --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 90%) !important;
+}
+
+#root > div > :first-child {
+  --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 70%) !important;
+}
