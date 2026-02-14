@@ -1,41 +1,131 @@
-[data-user-id] > img {
-    border-radius: 100%;
-}
-
-[data-message-id]:hover {
-    background: #0002;
-}
-
-[data-drop-above][data-drop-below] {
-    border-radius: 5em !important;
-    outline: none !important;
-    background: var(--oq6d073);
-}
-
-[data-drop-above][data-drop-below] button[data-id] {
-    border-radius: 100%;
-}
 
 *:not([class="_1yan8dd1 _1mqalmd1 _1mqalmd0 _1yan8dd2 _1yan8ddb _1yan8ddd"]) {
-    border-width: 0 !important;
+  border-width: 0!important;
 }
 
-button:has(svg):not(:has(span)) {
-  --color-mix-percentage: 70%;
-  background: color-mix(in oklab, var(--oq6d073), transparent var(--color-mix-percentage));
-  &:hover {
-    --color-mix-percentage: 50%;
+#portalContainer {
+  button + button {
+    border-radius: 0.5em !important;
+    margin-top: 0.2em;
   }
 }
 
 #root {
   background: var(--oq6d070);
+
+  & > div {
+    --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 90%) !important;
+
+    & > :nth-child(1):has([data-x-scrollbar-width]) /* server list and navigation*/ {
+      --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 70%) !important;
+      --_164xfge1z: 100%;
+      --_164xfge20: 100%;
+
+      [data-drop-target-for-element] {
+        button + div {
+          top: 40%;
+          left: -1em;
+        }
+
+        &:hover button + div {
+          display: none;
+        }
+      }
+
+
+      [data-drop-above][data-drop-below] {
+        border-radius:5em!important;
+        outline:none!important;
+      }
+      [data-drop-above][data-drop-below] button[data-id] {
+        border-radius:100%;
+        max-height: 2.5em;
+        overflow: clip;
+      }
+
+      & button:has(svg):not(:has(span)) {
+        --color-mix-percentage: 70%;
+        background: color-mix(in oklab, var(--oq6d073), transparent var(--color-mix-percentage));
+      }
+      & button:has(svg):not(:has(span)):hover {
+        --color-mix-percentage: 50%;
+      }
+
+    }
+
+    & > :nth-child(2) /*main body*/ {
+
+      span:has(svg:first-child:last-child) {
+        border-radius: 100%;
+      }
+
+      [data-message-id]:hover {
+        background: #0002;
+      }
+
+      [data-user-id] > img {
+        border-radius: 100%;
+      }
+
+      & > :nth-child(2) {
+        & > :nth-child(1) /* channel list */ {
+          --oq6d070: transparent;
+
+          button[aria-label] > p > span {
+            & > span[style] {
+              position: absolute;
+              left: -1.1em;
+            }
+            & > svg {
+              display: none;
+            }
+          }
+        }
+        & > :nth-child(3) {
+
+
+          & > :nth-child(1) /*room thread*/ {
+            header {
+              background: var(--oq6d070);
+              box-shadow: 0 0 1em -2px #0003;
+            }
+
+          }
+          & > :nth-child(3) /*members*/ {
+            button span {
+              --_164xfge20: 100%;
+            }
+          }
+        }
+      }
+
+      header {
+        span:has(img) {
+          border-radius: 100%;
+        }
+
+        button {
+          text-decoration: none;
+        }
+
+        & + div > [data-auto-scrollable] h2 > p > span {
+          white-space: pre-wrap;
+          text-align: left;
+          padding-left: auto;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          max-width: 45vw;
+          text-decoration: none !important;
+          background: #0003;
+          padding: 1em;
+          border-radius: 0.8em;
+          text-overflow: ellipsis;
+          width: max-content;
+          max-height: 140px;
+        }
+      }
+    }
+  }
 }
 
-#root > div {
-  --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 90%) !important;
-}
-
-#root > div > :first-child {
-  --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 70%) !important;
-}
