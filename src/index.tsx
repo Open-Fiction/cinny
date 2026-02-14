@@ -17,7 +17,7 @@ import App from './app/pages/App';
 import './app/i18n';
 import { pushSessionToSW } from './sw-session';
 import { getFallbackSession } from './app/state/sessions';
-import './skin.scss';
+import './skin.css';
 
 document.body.classList.add(configClass, varsClass);
 
