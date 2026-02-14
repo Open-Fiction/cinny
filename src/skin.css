@@ -25,6 +25,15 @@
         button + div {
           top: 40%;
           left: -1em;
+
+          & > span {
+            height: .5rem;
+            min-width: .5rem;
+
+            span {
+              display: none;
+            }
+          }
         }
 
         &:hover button + div {
@@ -34,8 +43,8 @@
 
 
       [data-drop-above][data-drop-below] {
-        border-radius:5em!important;
-        outline:none!important;
+        border-radius: 5em!important;
+        outline: none !important;
       }
       [data-drop-above][data-drop-below] button[data-id] {
         border-radius:100%;
@@ -75,6 +84,15 @@
             & > span[style] {
               position: absolute;
               left: -1.1em;
+
+              & > span {
+                height: .5rem;
+                min-width: .5rem;
+
+                span {
+                  display: none;
+                }
+              }
             }
             & > svg {
               display: none;
