@@ -28,6 +28,10 @@ button:has(svg):not(:has(span)) {
   }
 }
 
+#root {
+  background: var(--oq6d070);
+}
+
 #root > div {
   --oq6d070: color-mix(in oklab, var(--oq6d073), transparent 90%) !important;
 }
