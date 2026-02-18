@@ -9,7 +9,7 @@
   }
 
   /* Better lightboxes */
-  div:has(img[style*="transform"]) {
+  & > div div:has(img[style*="transform"]) {
     background: none;
     max-width: 100%;
     max-height: 100%;
@@ -58,13 +58,11 @@
         }
       }
 
-
       [data-drop-above][data-drop-below] {
         border-radius: 5em!important;
         outline: none !important;
       }
       [data-drop-above][data-drop-below] button[data-id] {
-        border-radius:100%;
         max-height: 2.5em;
         overflow: clip;
       }
@@ -90,12 +88,10 @@
           background: #0002;
         }
 
-
-
         [data-x-scrollbar-width] {
           & > div > div {
             flex-direction: column;
-            align-items: begin;
+            align-items: start;
           }
 
           div:has(img[alt$=".gif"], img[alt$=".png"], img[alt$=".jpg"], img[alt$=".webp"], img[alt$=".bmp"]) {
@@ -110,6 +106,7 @@
               display: none;
             }
           }
+
         }
       }
 
