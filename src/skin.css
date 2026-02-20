@@ -94,11 +94,11 @@
             align-items: start;
           }
 
-          div:has(img[alt$=".gif"], img[alt$=".png"], img[alt$=".jpg"], img[alt$=".webp"], img[alt$=".bmp"]) {
+          div:has(a[href$=".gif"], a[href$=".png"], a[href$=".jpg"], a[href$=".webp"], a[href$=".bmp"]) {
             width: max-content;
           }
 
-          & > div > div > div:has(img[alt$=".gif"], img[alt$=".png"], img[alt$=".jpg"], img[alt$=".webp"], img[alt$=".bmp"]) img {
+          & > div > div > div:has(a[href$=".gif"], a[href$=".png"], a[href$=".jpg"], a[href$=".webp"], a[href$=".bmp"]) img {
             width: auto;
             height: auto;
 
