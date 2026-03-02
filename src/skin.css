@@ -3,9 +3,17 @@
 }
 
 #portalContainer {
+
   button + button {
     border-radius: 0.5em !important;
     margin-top: 0.2em;
+  }
+
+  div:has(> button > img),
+  header > div > span:has(img),
+  header + div span:has(img) {
+    --_164xfge20: 100%;
+    border-radius: var(--_164xfge20);
   }
 
   /* Better lightboxes */
