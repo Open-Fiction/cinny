@@ -129,3 +129,8 @@ textarea {
 audio:not([controls]) {
   display: none !important;
 }
+
+/* Chrome browsers */
+:focus-visible {
+  outline: none;
+}
