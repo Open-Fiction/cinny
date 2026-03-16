@@ -126,7 +126,7 @@
         & > :nth-child(1) /* channel list */ {
           --oq6d070: transparent;
 
-          button[aria-label] > p > span {
+          [aria-selected] > a > p > span {
             & > span[style] {
               position: absolute;
               left: -1.1em;
