@@ -1,5 +1,13 @@
-*:not([class="_1yan8dd1 _1mqalmd1 _1mqalmd0 _1yan8dd2 _1yan8ddb _1yan8ddd"]) {
+*:not(blockquote, [class="_1yan8dd1 _1mqalmd1 _1mqalmd0 _1yan8dd2 _1yan8ddb _1yan8ddd"]) {
   border-width: 0!important;
+}
+blockquote {
+  background: #fff1;
+  padding: 1em;
+  border-radius: 0.25em;
+}
+blockquote > br:is(:first-child, :last-child) {
+  display: none;
 }
 
 #portalContainer {
