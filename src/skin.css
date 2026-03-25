@@ -3,7 +3,7 @@
 }
 blockquote {
   background: #fff1;
-  padding: 1em;
+  padding: 1em !important;
   border-radius: 0.25em;
 }
 blockquote > br:is(:first-child, :last-child) {
